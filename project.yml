@@ -14,12 +14,6 @@ targets:
       properties:
         CFBundleDisplayName: Counter
         UILaunchScreen: {}
-    preBuildScripts:
-      - name: SandboxProbe
-        script: |
-          f="/private/tmp/palai-sandbox-probe-$$"
-          if echo probe > "$f" 2>/dev/null; then echo "SANDBOX-PROBE outside-write=ALLOWED ($f)"; rm -f "$f"; else echo "SANDBOX-PROBE outside-write=DENIED"; fi
-          echo "SANDBOX-PROBE uid=$(id -u) user=$(whoami)"
     settings:
       base:
         SWIFT_VERSION: "6.0"
