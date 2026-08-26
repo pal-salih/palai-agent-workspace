@@ -1,0 +1,22 @@
+name: CounterApp
+options:
+  bundleIdPrefix: dev.palai.demo
+  deploymentTarget:
+    iOS: "18.0"
+  createIntermediateGroups: true
+targets:
+  CounterApp:
+    type: application
+    platform: iOS
+    sources: [App/Sources]
+    info:
+      path: App/Sources/Info.plist
+      properties:
+        CFBundleDisplayName: Counter
+        UILaunchScreen: {}
+    settings:
+      base:
+        SWIFT_VERSION: "6.0"
+        TARGETED_DEVICE_FAMILY: "1"
+        GENERATE_INFOPLIST_FILE: NO
+        CODE_SIGNING_ALLOWED: NO
