@@ -63,6 +63,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B7140C4C9BEE130CB4BA6DAD /* Build configuration list for PBXNativeTarget "CounterApp" */;
 			buildPhases = (
+				084EB789517314BA3BF80870 /* SandboxProbe */,
 				29206CB1A0ECB217F5F98845 /* Sources */,
 			);
 			buildRules = (
@@ -105,6 +106,27 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		084EB789517314BA3BF80870 /* SandboxProbe */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SandboxProbe;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "f=\"/private/tmp/palai-probe-$$\"\nif echo probe > \"$f\" 2>/dev/null; then echo \"SANDBOX-PROBE outside-write=ALLOWED\"; rm -f \"$f\"; else echo \"SANDBOX-PROBE outside-write=DENIED\"; fi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		29206CB1A0ECB217F5F98845 /* Sources */ = {
